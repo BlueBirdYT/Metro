@@ -91,6 +91,7 @@ async def jointest(ctx):
 
 
 @client.command(pass_context = True)
+@commands.check(is_blue)
 async def servers(ctx):
   servers = list(client.servers)
   await client.say(f"Connected on {str(len(servers))} servers:")
